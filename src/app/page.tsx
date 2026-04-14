@@ -18,15 +18,13 @@ export default function LandingPage() {
         </div>
 
         <h1 className="landing-title">
-          Don’t guess.
+          Don&apos;t guess.
           <br />
-          <span className="landing-title-accent">Just Ping</span>
+          <span className="landing-title-accent">Just ping.</span>
         </h1>
 
         <p className="landing-subtitle">
-          A simple way to stay in sync.
-          <br />
-          Set your status. See theirs. In real time.
+          See when they&apos;re free. Be there at the right moment.
         </p>
 
         <div className="landing-cta">
@@ -45,7 +43,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="preview-connector">
-            <span>♡</span>
+            <span>✦</span>
           </div>
           <div className="preview-card preview-card-dnd">
             <div className="preview-dot preview-dot-dnd" />
@@ -58,7 +56,7 @@ export default function LandingPage() {
       </main>
 
       <footer className="landing-footer">
-        <p>For the moments you don’t want to miss.</p>
+        <p>For the moments you don&apos;t want to miss.</p>
       </footer>
     </div>
   );

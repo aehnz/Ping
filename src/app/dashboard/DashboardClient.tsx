@@ -103,6 +103,13 @@ export default function DashboardClient() {
 
   return (
     <div className="app-shell">
+      {/* Aurora background */}
+      <div className="aurora-bg">
+        <div className="aurora-blob aurora-blob-1" />
+        <div className="aurora-blob aurora-blob-2" />
+        <div className="aurora-blob aurora-blob-3" />
+      </div>
+
       <Navbar userName={currentUser?.name || currentUser?.email} />
 
       <main className="dashboard-main">

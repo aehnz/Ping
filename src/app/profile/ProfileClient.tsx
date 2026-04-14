@@ -81,6 +81,11 @@ export default function ProfileClient() {
   if (loading) {
     return (
       <div className="app-shell">
+        <div className="aurora-bg">
+          <div className="aurora-blob aurora-blob-1" />
+          <div className="aurora-blob aurora-blob-2" />
+          <div className="aurora-blob aurora-blob-3" />
+        </div>
         <Navbar />
         <main className="profile-main">
           <div className="profile-loading">Loading profile...</div>
@@ -91,6 +96,13 @@ export default function ProfileClient() {
 
   return (
     <div className="app-shell">
+      {/* Aurora background */}
+      <div className="aurora-bg">
+        <div className="aurora-blob aurora-blob-1" />
+        <div className="aurora-blob aurora-blob-2" />
+        <div className="aurora-blob aurora-blob-3" />
+      </div>
+
       <Navbar userName={profile?.name || profile?.email} />
 
       <main className="profile-main">
