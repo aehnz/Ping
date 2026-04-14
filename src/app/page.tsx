@@ -38,7 +38,7 @@ export default function LandingPage() {
           <div className="preview-card preview-card-free">
             <div className="preview-dot preview-dot-free" />
             <div>
-              <div className="preview-name">Bebo</div>
+              <div className="preview-name">Honey</div>
               <div className="preview-status preview-status-free">Free</div>
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function LandingPage() {
           <div className="preview-card preview-card-dnd">
             <div className="preview-dot preview-dot-dnd" />
             <div>
-              <div className="preview-name">Bebu</div>
+              <div className="preview-name">Bunny</div>
               <div className="preview-status preview-status-dnd">Do Not Disturb</div>
             </div>
           </div>

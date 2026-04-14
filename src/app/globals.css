@@ -1556,45 +1556,118 @@ body {
 }
 
 /* ============================================
-   RESPONSIVE
+   RESPONSIVE & MOBILE OPTIMIZATION
    ============================================ */
 
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .landing-title { font-size: clamp(2.5rem, 6vw, 4rem); }
+}
+
+/* Base Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar-inner {
+    padding: 0 1.5rem;
+  }
+  
+  .dashboard-main,
+  .profile-main {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .blob-1, .aurora-blob-1 { width: 400px; height: 400px; }
+  .blob-2, .aurora-blob-2 { width: 350px; height: 350px; }
+  .blob-3, .aurora-blob-3 { width: 300px; height: 300px; }
+
+  .landing-preview {
+    gap: 1.25rem;
+  }
+}
+
+/* Small Mobile (max-width: 640px) */
 @media (max-width: 640px) {
   .navbar-inner {
     padding: 0 1rem;
+    height: 60px;
   }
 
-  .nav-username {
-    display: none;
-  }
+  .nav-username { display: none; }
+  .navbar-brand { font-size: 1.1rem; }
+  .nav-link { padding: 6px 12px; font-size: 0.85rem; }
+  .nav-logout { padding: 6px 14px; font-size: 0.75rem; }
 
   .dashboard-main,
   .profile-main {
     padding: 2rem 1rem;
   }
-
+  
   .dashboard-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
-  .landing-title {
-    font-size: 2.4rem;
-  }
-
-  .auth-card {
-    padding: 1.5rem;
-  }
-
-  .user-card {
-    padding: 1.5rem;
-  }
-
-  .partner-link-card {
-    padding: 1.5rem;
-  }
-
+  .landing-page { padding: 1.5rem 1rem; }
+  .landing-title { font-size: 2.6rem; letter-spacing: -0.02em; }
+  .landing-subtitle { font-size: 1.05rem; }
+  .cta-button { padding: 14px 32px; font-size: 1rem; }
+  
   .landing-preview {
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
   }
+  
+  .preview-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 16px 20px;
+  }
+  
+  .preview-connector { display: none; } /* Hide the spark connector on mobile stack */
+
+  .auth-page { padding: 1rem; }
+  .auth-card { 
+    padding: 1.75rem 1.5rem; 
+    border-radius: var(--radius-lg); 
+  }
+  .auth-brand { font-size: 1.4rem; }
+
+  .user-card { 
+    padding: 1.5rem; 
+    border-radius: var(--radius-lg); 
+  }
+  
+  .status-dot { width: 44px; height: 44px; }
+  .card-name { font-size: 1.15rem; }
+  .card-message { padding: 12px 14px; }
+
+  .partner-link-card, .profile-card { 
+    padding: 1.75rem 1.5rem; 
+    border-radius: var(--radius-lg);
+  }
+  .partner-link-title { font-size: 1.15rem; }
+  .partner-link-desc { font-size: 0.85rem; }
+  
+  .partner-code-display { flex-direction: column; align-items: stretch; gap: 8px; }
+  .partner-code-copy { width: 100%; text-align: center; }
+
+  .partner-input-row { flex-direction: column; }
+  .partner-link-btn { width: 100%; }
+
+  .profile-title { font-size: 1.8rem; }
+  
+  /* Shrink background blobs massively so they don't break viewport edges or cause scroll */
+  .blob-1, .aurora-blob-1 { width: 300px; height: 300px; filter: blur(50px); }
+  .blob-2, .aurora-blob-2 { width: 260px; height: 260px; filter: blur(40px); }
+  .blob-3, .aurora-blob-3 { width: 220px; height: 220px; filter: blur(35px); }
+}
+
+/* Extra Small (max-width: 480px) */
+@media (max-width: 480px) {
+  .landing-title { font-size: 2.2rem; }
+  .dashboard-title { font-size: 1.8rem; }
+  
+  .card-header { align-items: flex-start; }
+  .card-label { top: 0.75rem; right: 1rem; font-size: 0.65rem; }
 }
