@@ -14,17 +14,17 @@ export default function LandingPage() {
         <div className="landing-badge">
           <span className="badge-dot badge-dot-green" />
           <span className="badge-dot badge-dot-red" />
-          Real-Time Status
+          Ping
         </div>
 
         <h1 className="landing-title">
-          Know When Your
+          Don’t guess.
           <br />
-          <span className="landing-title-accent">Partner is Free</span>
+          <span className="landing-title-accent">Just Ping</span>
         </h1>
 
         <p className="landing-subtitle">
-          A beautifully simple way for couples to share their availability.
+          A simple way to stay in sync.
           <br />
           Set your status. See theirs. In real time.
         </p>
@@ -40,17 +40,17 @@ export default function LandingPage() {
           <div className="preview-card preview-card-free">
             <div className="preview-dot preview-dot-free" />
             <div>
-              <div className="preview-name">Alex</div>
+              <div className="preview-name">Bebo</div>
               <div className="preview-status preview-status-free">Free</div>
             </div>
           </div>
           <div className="preview-connector">
-            <span>💕</span>
+            <span>♡</span>
           </div>
           <div className="preview-card preview-card-dnd">
             <div className="preview-dot preview-dot-dnd" />
             <div>
-              <div className="preview-name">Jordan</div>
+              <div className="preview-name">Bebu</div>
               <div className="preview-status preview-status-dnd">Do Not Disturb</div>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function LandingPage() {
       </main>
 
       <footer className="landing-footer">
-        <p>Built with ❤️ for couples everywhere</p>
+        <p>For the moments you don’t want to miss.</p>
       </footer>
     </div>
   );

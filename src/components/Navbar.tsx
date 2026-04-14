@@ -23,7 +23,7 @@ export default function Navbar({ userName }: NavbarProps) {
       <div className="navbar-inner">
         <Link href="/dashboard" className="navbar-brand">
           <span className="brand-dot" />
-          Status
+          Ping
         </Link>
 
         <div className="navbar-links">

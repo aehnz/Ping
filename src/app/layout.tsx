@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Status — Real-Time Availability for Couples",
+  title: "Ping — Real-Time Availability for Couples",
   description:
     "Know when your partner is free or busy. A real-time availability status app for couples.",
 };

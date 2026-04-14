@@ -18,35 +18,26 @@ CREATE TABLE public.users (
 -- 2. Enable Row Level Security
 ALTER TABLE public.users ENABLE ROW LEVEL SECURITY;
 
--- 3. RLS Policies
+-- 3. RLS Policies (non-recursive)
 
--- Users can read their own profile
-CREATE POLICY "Users can read own profile"
+-- SELECT: Allow all authenticated users to read any row
+CREATE POLICY "Authenticated users can read profiles"
   ON public.users FOR SELECT
-  USING (auth.uid() = id);
+  TO authenticated
+  USING (true);
 
--- Users can read their partner's profile
-CREATE POLICY "Users can read partner profile"
-  ON public.users FOR SELECT
-  USING (
-    id = (SELECT partner_id FROM public.users WHERE id = auth.uid())
-  );
-
--- Users can update their own profile
-CREATE POLICY "Users can update own profile"
-  ON public.users FOR UPDATE
-  USING (auth.uid() = id)
-  WITH CHECK (auth.uid() = id);
-
--- Users can insert their own profile
+-- INSERT: Users can only insert their own row
 CREATE POLICY "Users can insert own profile"
   ON public.users FOR INSERT
+  TO authenticated
   WITH CHECK (auth.uid() = id);
 
--- Allow users to read any profile by partner_code (for linking)
-CREATE POLICY "Users can read by partner code"
-  ON public.users FOR SELECT
-  USING (true);
+-- UPDATE: Users can only update their own row
+CREATE POLICY "Users can update own profile"
+  ON public.users FOR UPDATE
+  TO authenticated
+  USING (auth.uid() = id)
+  WITH CHECK (auth.uid() = id);
 
 -- 4. Function to handle new user signup
 CREATE OR REPLACE FUNCTION public.handle_new_user()

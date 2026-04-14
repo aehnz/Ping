@@ -67,7 +67,7 @@ export default function LoginPage() {
         <div className="auth-header">
           <a href="/" className="auth-brand">
             <span className="brand-dot" />
-            Status
+            Ping
           </a>
           <p className="auth-tagline">Stay connected, effortlessly</p>
         </div>
